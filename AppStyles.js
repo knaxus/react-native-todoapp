@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
       borderBottomWidth: 0.8,
     },
     todoText: {
+      width: 250,
       alignContent: 'center',
       color: '#f2f2f2',
       fontFamily: 'Roboto',

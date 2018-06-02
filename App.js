@@ -39,16 +39,34 @@ export default class App extends React.Component {
     this.setState({todo: arr});
   };
 
+  editTodo = (t) => {
+    var arr = this.state.todo;
+    var pos = arr.indexOf(t);
+    var newText = this.refs.t;
+    var editedTodo = newText;
+    arr[pos] = editedTodo;
+    this.setState({todo: arr});
+  };
+  
   renderTodos = () => {
     return this.state.todo.map(t=>{
       return (
         <View style={styles.todoStyle} key={t}>
-          <Text style={styles.todoText}>{t}</Text>
-          <TouchableHighlight onPress={() => {this.deleteTodo(t)}}>
+          <Text style={styles.todoText} id={t}>{t}</Text>
+          <TouchableHighlight style={{margin: 0}}>
+          <Icon 
+            name='edit'
+            color="#11bb11"
+            type="font-awesome"
+            onPress={() => {this.editTodo.bind(t)}}
+          />
+          </TouchableHighlight>
+          <TouchableHighlight style={{margin: 0}}>
           <Icon 
             name='delete'
-            color="#991111"
+            color="#bb1111"
             type="material-community"
+            onPress={() => {this.deleteTodo(t)}}
           />
           </TouchableHighlight>
         </View>
