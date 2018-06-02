@@ -45,12 +45,11 @@ export default class App extends React.Component {
         <View style={styles.todoStyle} key={t}>
           <Text style={styles.todoText}>{t}</Text>
           <TouchableHighlight onPress={() => {this.deleteTodo(t)}}>
-          <Image 
-          source={require('./assets/delete.png')}
-          style={{
-            height: 20,
-            width: 20
-          }}></Image>
+          <Icon 
+            name='delete'
+            color="#991111"
+            type="material-community"
+          />
           </TouchableHighlight>
         </View>
       )
@@ -70,11 +69,12 @@ export default class App extends React.Component {
         imageStyle={{ resizeMode: 'stretch' }}
         source={require('./assets/bg-img.png')} >
         <View style={styles.viewStyle}>
-          <Icon 
-            name='delete'
-            color="#991111"
-            type="material-community"
-          />
+          <Image 
+          source={require('./assets/icon.png')}
+          style={{
+            height: 50,
+            width: 50
+          }}></Image>
           <Text style={styles.header}>Notes App</Text>
           <TextInput 
             value={this.state.text}
