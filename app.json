@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "reactnative-todoapp",
+    "name": "TO DO APP",
     "description": "This project is really great.",
-    "slug": "reactnative-todoapp",
+    "slug": "rn-todoapp",
     "privacy": "public",
     "sdkVersion": "27.0.0",
     "platforms": ["ios", "android"],
